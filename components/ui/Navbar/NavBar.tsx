@@ -87,7 +87,6 @@ export default function App() {
             <Dropdown.Menu
               aria-label="User menu actions"
               color="secondary"
-              onAction={(actionKey) => console.log({ actionKey })}
             >
               <Dropdown.Item key="profile" css={{ height: "$18", borderBottom: '1px solid rgba(255, 255, 255, 0.5)' }}>
                 <Text b color="inherit" css={{ d: "flex" }}>

@@ -1,26 +1,397 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body{
+  padding: 0 50px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} 
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
-* {
-  box-sizing: border-box;
+.fadeIn {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Componente NavBar */
+
+.logo-movie{
+  cursor: pointer;
+}
+
+/* Componente MovieBannerHome */
+
+.poster {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 720px;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  box-shadow: 0 0 8px 8px black inset;
+}
+
+.poster-data .buttons_banner{
+  display: flex;
+  margin-top: -15px !important;
+}
+
+.poster img{
+  width: 60%;
+  margin-top: 20px;
+}
+
+.poster:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.poster-data {
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  padding-left: 52px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+
+.poster-data .text_banner{
+  width: 40%;
+}
+
+.poster-data .buttons_banner button{
+  background: linear-gradient(to right, #6569b1, #3d4198);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 15%;
+  height: 40px;
+  box-shadow: 4px 6px 30px -7px rgba(0,0,0,0.75);
+}
+
+.poster-data .buttons_banner button:hover{
+  background: linear-gradient(to right, #4f5397, #2c2f6e);
+}
+
+.poster-data .buttons_banner .button2{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.poster-data .buttons_banner .button2:hover{
+  background: linear-gradient(to right, #0f2027, #1c333a, #23424f);
+}
+
+
+/* Estilos de la página que muestra el detalle de las películas */
+
+/* Componente movies/[id] */
+
+.movie-detail {
+  width: 100%;
+  height: 90vh;
+  max-height: 720px;
+  position: relative;
+}
+
+.movie-detail::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle at 50% 5%, rgba(255, 255, 255, 0), black 70%);
+}
+
+/* Componente MovieDetailInfo */
+
+.genresMovie{
+  margin-right: 20px;
+  border: 1px solid #274494;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+/* Componente MovieCard */
+
+.card-item{
+  max-width: 90%;
+}
+
+/* Componente MovieCast */
+
+.containerCast{
+  margin-top: 10px;
+}
+
+.Cast-movie{
+  height: 100%;
+  max-height: 400px;
+  padding-left: 10px;
+  overflow: scroll;
+}
+
+.Cast-movie::-webkit-scrollbar{
+  width: 7px;
+}
+
+.Cast-movie::-webkit-scrollbar-thumb{
+  background-color: rgb(102, 102, 102);
+  border-radius: 5px;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0.25rem 0.75rem 0.25rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #00000066;
+  backdrop-filter: saturate(180%) blur(10px);
+  gap: 0.25rem;
+}
+
+.container-cardUser{
+  overflow: scroll;
+}
+
+.container-cardUser::-webkit-scrollbar{
+  width: 0px;
+  padding-top: 22px;
+  height: 5px;
+}
+
+.container-cardUser::-webkit-scrollbar-thumb{
+  background-color: rgb(102, 102, 102);
+  border-radius: 5px;
+}
+
+
+/* CSS RECOMMENDATIONS */
+
+.container-list{
+  width: 100%;
+  display: Grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container-list .card-item{
+  margin-top: 20px;
+}
+
+
+/* Componente 404 */
+
+.container-pageNotFound{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+
+
+/* Componente Footer */
+
+footer{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+/* Seccion de Responsive */
+
+
+@media screen and (max-width: 950px){
+
+  main{
+    overflow: hidden;
   }
-  body {
-    color: white;
-    background: black;
+
+  /* Componente search ([query]) */
+
+  .container-list{
+    grid-template-columns: 1fr 1fr 1fr;
   }
+
+  /* Componente MovieBannerHome */
+
+  .poster-data .buttons_banner button{
+    font-size: 12px;
+    height: 35px;
+  }
+
+  .poster-data .text_banner{
+      width: 70%;
+  }
+
+
+}
+
+@media screen and (max-width: 800px){
+
+   /* Componente search ([query]) */
+
+   .container-list{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Componente MovieBannerHome */
+
+  .poster-data .text_banner h5{
+      font-size: 13px;
+  }
+
+  .poster-data .buttons_banner button{
+    font-size: 10px;
+    height: 30px;
+  }
+
+  .poster-data h2{
+    font-size: 37px;
+}
+
+/* Componente de SlideMovies */
+
+.titleSlides{
+  font-size: 35px;
+}
+  
+}
+
+@media screen and (max-width: 640px){
+
+  body{
+    padding: 0 20px;
+  }
+
+   /* Componente search ([query]) */
+
+   .container-list{
+    grid-template-columns: 1fr;
+  }
+
+  /* Componente MovieBannerHome */
+
+  .poster{
+    height: 60vh;
+  }
+
+  .poster-data h2{
+    font-size: 35px;
+  }
+
+  .poster-data .text_banner h5{
+    font-size: 12px;
+  }
+
+  .poster-data .buttons_banner button{
+    font-size: 8px;
+    height: 25px;
+  }
+
+  .poster-data .text_banner{
+      width: 90%;
+  }
+
+  /* Componente MovieCard */
+
+  .card-item{
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Componente de SlideMovies */
+
+  .titleSlides{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  /* Componente Footer */
+
+  footer h5{
+    font-size: 13px;
+  }
+    
+}
+
+@media screen and (max-width: 500px){
+
+  /* Componente MovieBannerHome */
+
+  .poster{
+    height: 50vh;
+  }
+
+  .poster-data{
+    padding-left: 30px;
+  }
+
+  .poster-data .text_banner{
+      width: 90%;
+  }
+
+  .poster-data .buttons_banner button{
+    font-size: 6px;
+    height: 20px;
+  }
+
+  .poster-data h2{
+    font-size: 27px;
+}
+
+  .poster-data .text_banner h5{
+    font-size: 10px;
+}
+
+ /* Componente MovieCard */
+
+ .card-item{
+  height: 300px;
+}
+
+/* Componente de SlideMovies */
+
+.titleSlides{
+  font-size: 25px;
+}
+
+/* Componente Footer */
+
+footer h5{
+  font-size: 10px;
+}
+  
 }

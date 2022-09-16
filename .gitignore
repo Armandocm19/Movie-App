@@ -2,7 +2,7 @@
 
 mongo/
 
-.env.development
+.env
 .env.production
 
 # dependencies

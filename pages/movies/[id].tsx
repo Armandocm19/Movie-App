@@ -20,6 +20,8 @@ const MoviePage: NextPage<Props> = ({ movie, movieCast, moviesRecommendations })
 
     const img = concatUrlImage.originalImage( movie.backdrop_path );
 
+    console.log(movie)
+
     return(
        <>
        

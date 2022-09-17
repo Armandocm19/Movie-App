@@ -16,7 +16,7 @@ interface Props {
     lenguage: string,
     release_date: string,
     description: string,
-    vote_average: number
+    vote_average: number,
 }
 
 

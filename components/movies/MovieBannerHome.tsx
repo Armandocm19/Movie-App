@@ -30,7 +30,7 @@ export const MovieBannerHome: FC<Props> = ({ movie }) => {
                     <div className="buttons_banner">
 
                         <button>Reproducir</button>
-                        <button className="button2" style={{ 'marginLeft': 20 }} onClick={ onPushPage }>Detalles</button>
+                        <button className="button2" style={{ 'marginLeft': 19 }} onClick={ onPushPage }>Detalles</button>
             
                     </div>
 

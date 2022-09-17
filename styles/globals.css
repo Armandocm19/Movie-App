@@ -321,15 +321,16 @@ footer{
   }
 
   .poster-data h2{
-    font-size: 35px;
+    font-size: 45px;
   }
 
   .poster-data .text_banner h5{
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .poster-data .buttons_banner button{
-    font-size: 8px;
+    width: 25%;
+    font-size: 10px;
     height: 25px;
   }
 
@@ -395,16 +396,15 @@ footer{
   }
 
   .poster-data .buttons_banner button{
-    font-size: 6px;
-    height: 20px;
+    font-size: 10px;
   }
 
   .poster-data h2{
-    font-size: 27px;
+    font-size: 35px;
 }
 
   .poster-data .text_banner h5{
-    font-size: 10px;
+    font-size: 8px;
 }
 
  /* Componente MovieCard */

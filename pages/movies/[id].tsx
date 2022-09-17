@@ -38,13 +38,14 @@ const MoviePage: NextPage<Props> = ({ movie, movieCast, moviesRecommendations })
                     lenguage={ movie.original_language }
                     release_date={ movie.release_date }
                     description={ movie.overview }
+                    vote_average={ movie.vote_average }
                 />
 
                 <MovieCast movieCast={ movieCast } />
 
             </Grid.Container>
 
-            <Text h3 weight="bold" size="2rem">
+            <Text h3 weight="bold" size="2rem" className="text-recommendations">
                  Recommendations {`(${moviesRecommendations.length})`}
             </Text>
 

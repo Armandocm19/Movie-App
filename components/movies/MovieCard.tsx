@@ -70,20 +70,6 @@ export const MovieCard: FC<Props> = ({ movie, index }) => {
                                     { formatDate( movie.release_date ) }
                                 </Text>
                             </Col>
-            
-                            <Col css={{ width: "auto" }}>
-            
-                                <Row gap={0.5} justify="flex-end" align="center" >
-                                    <Stars />  
-                                    <Text
-                                        css={{ color: "inherit", margin: '0 auto'}}
-                                        size={15}
-                                    >
-                                    { Number(movie.vote_average).toFixed(1) }
-                                    </Text>
-                                </Row>
-            
-                            </Col>
                         </Row>
             
                     </Card.Footer>

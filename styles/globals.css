@@ -295,7 +295,20 @@ footer{
     padding: 0 20px;
   }
 
+  /* Componente recommendations */
+
+  .text-recommendations{
+    display: flex;
+    justify-content: center;
+  }
+
    /* Componente search ([query]) */
+
+   .title-result{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+   }
 
    .container-list{
     grid-template-columns: 1fr;
@@ -348,6 +361,24 @@ footer{
 }
 
 @media screen and (max-width: 500px){
+
+   /* Componente recommendations */
+
+  .text-recommendations{
+   font-size: 25px;
+  }
+
+  /* Componentet MovieDetailInfo */
+  
+  .title-detailInfo{
+    font-size: 35px;
+  }
+
+   /* Componente search ([query]) */
+
+   .title-result{
+    font-size: 15px;
+   }
 
   /* Componente MovieBannerHome */
 

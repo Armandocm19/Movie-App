@@ -1,6 +1,7 @@
 import { FC } from "react"
 
-import { Grid, Text, CSS, Col, Row, Spacer } from "@nextui-org/react"
+import { Grid, Text, Col, Row, Spacer } from "@nextui-org/react"
+import { Stars } from "@mui/icons-material";
 import { formatDate } from '../../utils/formatDate';
 
 type genreMovie = {
@@ -14,18 +15,19 @@ interface Props {
     duration: number,
     lenguage: string,
     release_date: string,
-    description: string
+    description: string,
+    vote_average: number
 }
 
 
-export const MovieDetailInfo: FC<Props> = ({ title, genres, duration, lenguage, release_date, description }) => {
+export const MovieDetailInfo: FC<Props> = ({ title, genres, duration, lenguage, release_date, description, vote_average }) => {
 
     return (
         <>
         
         <Grid xs={12} sm={6.5} md={7} justify="center" css={{ mt: 70 }}>
             <Col >
-                <Text h2 size="3rem" weight="medium" >
+                <Text h2 size="3rem" weight="medium" className="title-detailInfo">
                     { title }
                 </Text>
 
@@ -52,6 +54,18 @@ export const MovieDetailInfo: FC<Props> = ({ title, genres, duration, lenguage, 
                 <Text h2 size="1rem" weight="medium" >
                    Release date:  { formatDate( release_date ) } 
                 </Text>
+
+                <Row>
+                    <Text h5 size={15} weight='medium' css={{ pr: 5, ml: 0 }}>Calificacion:</Text>
+                    <Stars />  
+                    <Text
+                        h5
+                        css={{ color: "inherit", ml: 5}}
+                         size={15}
+                    >
+                        { Number( vote_average ).toFixed(1) }
+                    </Text>
+                </Row>
 
                 <Text
                   h1

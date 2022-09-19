@@ -82,6 +82,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
                 movieCast: movieCast.cast,
                 moviesRecommendations: moviesRecommendations.results
             },
+            revalidate: 86400,
     };
     } catch (error) {
         return {

@@ -35,7 +35,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       topMovies: results,
       trendingMovies: trendingMovies.results
-    }
+    },
+    revalidate: 86400,
   }
 
 }

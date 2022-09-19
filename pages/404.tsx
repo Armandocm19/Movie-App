@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import Head from "next/head";
 import { Link } from "@nextui-org/react";
-import { Home } from "@mui/icons-material";
+import { FaHome } from 'react-icons/fa';
 
 export default function Custom404() {
   return (
@@ -15,7 +15,7 @@ export default function Custom404() {
         <h1>404 Page Not Found</h1>
         <NextLink href="/">
           <Link>
-            <Home />
+            <FaHome />
             Go to home :D
           </Link>
         </NextLink>

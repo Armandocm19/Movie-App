@@ -25,6 +25,7 @@ body{
 /* Componente NavBar */
 
 .logo-movie{
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -133,6 +134,12 @@ body{
   padding: 10px;
   border-radius: 10px;
   cursor: default;
+}
+
+/* Component MovieOptions */
+
+.icons-options{
+  margin-right: 5px;
 }
 
 /* Componente MovieCard */

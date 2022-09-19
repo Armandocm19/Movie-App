@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import { Grid, Text, Col, Row, Spacer } from "@nextui-org/react"
-import { Stars } from "@mui/icons-material";
+// import { Stars } from "@mui/icons-material";
 import { formatDate } from '../../utils/formatDate';
 
 type genreMovie = {
@@ -57,7 +57,7 @@ export const MovieDetailInfo: FC<Props> = ({ title, genres, duration, lenguage, 
 
                 <Row>
                     <Text h5 size={15} weight='medium' css={{ pr: 5, ml: 0 }}>Calificacion:</Text>
-                    <Stars />  
+                    {/* <Stars />   */}
                     <Text
                         h5
                         css={{ color: "inherit", ml: 5}}

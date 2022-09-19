@@ -60,8 +60,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
             props: {
                 inputQuery: query,
                 resultsQuery: resultsQuery.results
-            },
-            revalidate: 86400,
+            }
     };
     } catch (error) {
         console.log(error)

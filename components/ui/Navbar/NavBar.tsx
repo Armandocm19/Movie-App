@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link'
 import { Navbar, Text, Avatar, Dropdown, Input } from "@nextui-org/react";
 
-import { MovieFilter, SearchOutlined } from '@mui/icons-material';
+// import { MovieFilter, SearchOutlined } from '@mui/icons-material';
 
 export default function App() {
 
@@ -19,9 +19,9 @@ export default function App() {
 
       <Navbar isBordered variant="sticky" css={{ width: '100% !important' }} >
         <Navbar.Brand css={{ mr: "$4" }}>
-          <NextLink  href='/' passHref>
+          {/* <NextLink  href='/' passHref>
             <MovieFilter className='logo-movie' />
-          </NextLink>
+          </NextLink> */}
           <NextLink href='/' passHref>
             <Text b css={{ mr: "$11", cursor: 'pointer', ml: 10, textGradient: "45deg, $yellow600 -20%, $red600 100%" }} hideIn="xs">
               MovieApp
@@ -51,9 +51,9 @@ export default function App() {
           >
             <Input
               clearable
-              contentLeft={
-                <SearchOutlined />
-              }
+              // contentLeft={
+              //   <SearchOutlined />
+              // }
               value={ searchQuery }
               contentLeftStyling={false}
               css={{

@@ -1,6 +1,5 @@
 import { FC } from "react";
 import NextLink from 'next/link'
-import { Stars } from "@mui/icons-material";
 import { Text, Card, Col, Row, Loading } from "@nextui-org/react";
 
 

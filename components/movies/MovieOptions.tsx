@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import { Grid, Row, CSS, Card, Button } from "@nextui-org/react";
 
-import { PlayCircle, Favorite, Slideshow } from "@mui/icons-material";
+// import { PlayCircle, Favorite, Slideshow } from "@mui/icons-material";
 
 interface Props {
     poster: string
@@ -30,7 +30,7 @@ export const MovieOptions: FC<Props> = ({ poster }) => {
                         ghost
                         css={buttonCss}
                     >
-                        <PlayCircle sx={{ mr: 1 }} />
+                        {/* <PlayCircle sx={{ mr: 1 }} /> */}
                           View Trailer
                     </Button>
 
@@ -39,7 +39,7 @@ export const MovieOptions: FC<Props> = ({ poster }) => {
                         ghost
                         css={buttonCss}
                     >
-                        <Favorite sx={{ mr: 1 }} />
+                        {/* <Favorite sx={{ mr: 1 }} /> */}
                           Add to favorites
                     </Button>
 
@@ -48,7 +48,7 @@ export const MovieOptions: FC<Props> = ({ poster }) => {
                         ghost
                         css={buttonCss}
                     >
-                        <Slideshow sx={{ mr: 1 }} />
+                        {/* <Slideshow sx={{ mr: 1 }} /> */}
                           Watch Movie
                     </Button>
 

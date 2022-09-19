@@ -2,6 +2,7 @@
 
 mongo/
 
+.env
 .env.development
 
 # dependencies

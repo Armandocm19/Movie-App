@@ -9,7 +9,6 @@ export const movie = async ( id: string, append: string | [string] = "" ): Promi
       }
     
       if (typeof append !== "string" && !Array.isArray(append)) {
-        //FIXME: possible delete this :F
         throw new Error(
           "Invalid append, append should be a string or an array of strings"
         );

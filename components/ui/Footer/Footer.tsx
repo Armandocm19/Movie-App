@@ -8,7 +8,7 @@ export default function App() {
         
             <footer>
                 <Text h5 color="inherit" css={{ d: "flex" }}>
-                  MovieApp by Armando Cortés Murillo. ©2021. All rights reserved.
+                  Web developer Armando Cortés Murillo. 2023 ❤️
                 </Text>
             </footer>
         

@@ -480,9 +480,7 @@ footer{
   }
 
   .poster-data .buttons_banner button{
-    width: 25%;
-    font-size: 10px;
-    height: 25px;
+    min-width: 25%;
   }
 
   .poster-data .text_banner{
@@ -576,4 +574,19 @@ footer h5{
   font-size: 10px;
 }
   
+}
+
+@media screen and (max-width: 400px){
+
+  .btn-53 .letters {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .poster-data .buttons_banner button{
+      min-width: 20%;
+  }
+
 }

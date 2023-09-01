@@ -4,6 +4,8 @@ import { Text, Button } from "@nextui-org/react";
 import { popularResults } from "../../types/popular"
 import concatUrlImage from "../../utils/concatUrlImage";
 import { useRouter } from "next/router";
+import { PlayButton } from "./PlayButton";
+import { DetailButton } from "./DetailButton";
 
 interface Props {
     movie: popularResults
@@ -29,8 +31,8 @@ export const MovieBannerHome: FC<Props> = ({ movie }) => {
 
                     <div className="buttons_banner">
 
-                        <button>Reproducir</button>
-                        <button className="button2" style={{ 'marginLeft': 19 }} onClick={ onPushPage }>Detalles</button>
+                        <PlayButton />
+                        <DetailButton />
             
                     </div>
 

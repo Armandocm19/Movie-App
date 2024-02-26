@@ -26,7 +26,7 @@ export const MovieCast: FC<Props> = ({ movieCast }) => {
                   <CardBody>
                     <User
                       avatarProps={{
-                        src: concatUrlImage.originalImage(profile_path),
+                        src: concatUrlImage.originalImage(profile_path!),
                       }}
                       name={name}
                       description={character}

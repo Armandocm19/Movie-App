@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const MovieBannerHome: FC<Props> = ({ movie }) => {
-  const poster = concatUrlImage.originalImage(movie.backdrop_path);
+  const poster = concatUrlImage.originalImage(movie.backdrop_path!);
 
   return (
     <>
